@@ -1,0 +1,22 @@
+
+.avatar-sm {
+    height: 40px;
+    width: 40px;
+    border-radius: 40%;
+}
+
+
+
+
+
+.avatar-big {
+    height: 200px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+
+.logo{
+    height: 30px;
+    width: auto;
+}
