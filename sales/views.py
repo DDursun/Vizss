@@ -4,6 +4,7 @@ from .models import Sale
 from .forms import SalesSearchForm
 import pandas as pd
 from .utils import get_customer_from_id, get_salesman_from_id, get_chart
+from reports.forms import ReportForm
 
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -19,7 +20,8 @@ def home_view(request):
     df = None
     chart = None
     no_data = None
-    form = SalesSearchForm(request.POST or None)
+    search_form = SalesSearchForm(request.POST or None)
+    report_form = ReportForm()
     if request.method == 'POST':
         date_from = request.POST.get('date_from')
         date_to = request.POST.get('date_to')
@@ -73,7 +75,8 @@ def home_view(request):
 
     context = {
         
-        'form': form,
+        'search_form': search_form,
+        'report_form': report_form,
         'sales_df': sales_df,
         'positions_df': positions_df,
         'merged_df': merged_df,

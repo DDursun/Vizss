@@ -1,0 +1,29 @@
+
+.avatar-sm {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.not-visible {
+    display: none;
+
+}
+
+.img-fluid {
+    max-width: 60%;
+    height: auto;
+  }
+
+.avatar-big {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 300px;
+  }
+
+
+.logo{
+    height: 50px;
+    width: 55px;
+}
